@@ -9,6 +9,7 @@ services:
       - db
     environment:
       - DATABASE_URL=postgresql+asyncpg://${DB_USER}:${DB_PASSWORD}@db:${DB_PORT}/${DB_NAME}
+      - OPEN_AI_KEY=${OPEN_AI_KEY}
 
   db:
     image: ankane/pgvector
